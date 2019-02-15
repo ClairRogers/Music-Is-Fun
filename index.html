@@ -6,21 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Music Is Fun!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Merienda:700|Mukta" rel="stylesheet">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
 
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+    <section class="container-fluid header">
+        <div class="row">
+            <div class="col-12 col-md-5 offset-md-1 toprow">
+                <h1 class="titlefont">PLAY <i class="fas fa-play"></i> LIST</h1>
+                <p><i>Search for your favorite music and musical artists...</i></p>
+            </div>
         </div>
-    </form>
-    <div id="songs">
+        <div class="row">
+            <div class="col-12 col-md-7 offset-md-1">
+                <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+                    <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                        <button type="submit" class="btn btn-dark ml-2" id="get-music-button">Get Music</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="message" class="row">
+            <div class="col-12 col-md-3 offset-md-1">
+                <p class="mt-4"><i>We've compiled a list of songs that match that description. Scroll down to see what
+                        music we've
+                        found!</i></p>
+                <h1 class="text-center"><a href="#songs"><i class="fas fa-arrow-circle-down"></i></a></h1>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid mainpage">
+        <div id="songs" class="row py-3">
+            <!-- cards populate here -->
+        </div>
+    </section>
+    <footer id="footer" class="footer text-center pt-2">
+        <audio controls class="w-50">
+            <source src="src">
+        </audio>
+    </footer>
 
-    </div>
+
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="app/main.js"></script>
 </body>
