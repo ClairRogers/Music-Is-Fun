@@ -34,7 +34,7 @@ class ItunesController {
     document.getElementById('footer').style.opacity = '1'
   }
   playSong(url) {
-    document.querySelector('source').src = url
+    document.getElementById('source').setAttribute('src', url)
   }
 
 }

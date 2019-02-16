@@ -15,10 +15,10 @@ export default class Song {
                     <img src="${this.albumArt}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h4>${this.artist}</h4>
-                        <h5>${this.title}</h5>
+                        <h5 class="title"><a onclick="app.controllers.itunesCtrl.playSong('${this.preview}')">${this.title}</a></h5>
                         <p>${this.collection}<p>
                         <h5><b>$${this.price}</b></h5>
-                        <button type="button" class="btn btn-warning w-100" onclick="app.controllers.itunesCtrl.playSong(${this.preview})">Play</button>
+                        <button type="button" class="btn btn-warning w-100" onclick="app.controllers.itunesCtrl.playSong('${this.preview}')">PLAY</button>
                     </div>
                 </div>
             </div>

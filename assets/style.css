@@ -48,6 +48,7 @@ a:hover {
 
 #footer {
   opacity: 0;
+  border-top: 1px solid #f4b800;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -56,4 +57,13 @@ a:hover {
   text-align: center;
   z-index: 2;
   transition: all .25s ease;
+}
+
+.title {
+  transition: all .5s ease;
+  cursor: pointer;
+}
+
+.title:hover {
+  opacity: .6;
 }
