@@ -32,6 +32,8 @@ class ItunesController {
     itunesService.getMusicByArtist(artist)
     document.getElementById('message').style.opacity = '1'
     document.getElementById('footer').style.opacity = '1'
+    let form = e.target;
+    form.reset()
   }
   playSong(url) {
     document.getElementById('source').setAttribute('src', url)
